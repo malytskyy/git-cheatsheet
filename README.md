@@ -6,110 +6,47 @@
 - [Branches](#branches)
 
 ## Getting information
-Show short status  
- ``` 
- git status -s 
- ```
-View outstanding commits for upstream
-``` 
-git diff --cached [path] 
-```
-Show outstanding commits for upstream
-```
-git log --stat @{u}..
-```
-Go grab all of the stuff from the upstream, and then compare my current branch against the upstream master branchgit branchShow all branches
-```
-git fetch && git log ..@{u}
-```
-List only conflicted files 
-```
-git diff --name-only --diff-filter=U
-```
-List all untracked files in text-processing friendly mode
-```
-git ls-files --others --exclude-standard
-```
+|Command|Description|
+|---|---|
+|``` git status -s ```|Show short status|
+|``` git diff --cached [path] ```|View outstanding commits for upstream|
+|```git log --stat @{u}..```|Show outstanding commits for upstream|
+|```git fetch && git log ..@{u}```|Go grab all of the stuff from the upstream, and then compare my current branch against the upstream master branchgit branchShow all branches|
+|```git diff --name-only --diff-filter=U```|List only conflicted files |
+|```git ls-files --others --exclude-standard```|List all untracked files in text-processing friendly mode|
+
 ## Make changes
-Commit with message that will be provided via editor 
-```
-git commit
-```
-Template loaded up with the last commit message
-```
-git commit -c HEAD
-```
-Add all changed files to staging area
-```
-git add .
-```
-Add all changes and commit. Message still will be entered
-```
-git commit –a
-```
-Creates .rej files when can't automatically detect how to apply a patch 
-```
-git apply --reject --whitespace=fix [patchfile]
-```
+|Command|Description|
+|---|---|
+|```git commit```|Commit with message that will be provided via editor|
+|```git commit -c HEAD```|Template loaded up with the last commit message|
+|```git add .```|Add all changed files to staging area|
+|```git commit –a```|Add all changes and commit. Message still will be entered|
+|```git apply --reject --whitespace=fix [patchfile]```|Creates `.rej` files when can't automatically detect how to apply a patch|
+
 ## Undo changes
-To get rid of untracked files and directories in your working copy
-```
-git clean -fd
-```
-Unstages file, but reserves changes
-```
-git reset [file]
-```
-The working tree and staging area are reset to the tip of the current branch or HEAD.
-```
-git reset --hard HEAD
-```
-Undo changes locally to modified unstaged file [file]
-```
-git checkout -- [file]
-```
-Undo a commit
-```
-git reset --soft HEAD~1
-```
+|Command|Description|
+|---|---|
+|```git clean -fd```|To get rid of untracked files and directories in your working copy|
+|```git reset [file]```|Unstages file, but reserves changes|
+|```git reset --hard HEAD```|The working tree and staging area are reset to the tip of the current branch or HEAD|
+|```git checkout -- [file]```|Undo changes locally to modified unstaged file [file]|
+|```git reset --soft HEAD~1```|Undo a commit|
+
 
 ## Branches
-Get newest state from upstream without changing any local data  
-```
-git fetch
-``` 
-Do a ```git fetch && git merge``` on current branch
-```
-git pull
-```
-Publish current branch
-```
-git push
-```
-Switch to branch [branch]
-```
-git checkout [branch]
-```
-Delete branch [branch]
-```
-git branch –d [branch]
-```
-Create a new branch [branch] and switch to it
-```
-git checkout –b [branch]
-```
-Integrate branch [branch] into current branch
-```
-git rebase [branch]
-```
-Create public remote branch from current. Call this to set default:```$ git config --global push.default current```
-```
-git push -u
-```
-Delete remote branch [branch]
-```
-git push origin --delete [branch]
-```
+|Command|Description|
+|---|---|
+|```git fetch``` |Get newest state from upstream without changing any local data|
+|```git pull```|Do a ```git fetch && git merge``` on current branch|
+|```git push```|Publish current branch|
+|```git checkout [branch]```|Switch to branch [branch]|
+|```git branch –d [branch]```|Delete branch [branch]|
+|```git checkout –b [branch]```|Create a new branch [branch] and switch to it|
+|```git rebase [branch]```|Integrate branch [branch] into current branch|
+|```git push -u```|Create public remote branch from current. Call this to set default:```$ git config --global push.default current```|
+|```git push origin --delete [branch]```|Delete remote branch [branch]|
+
 
 
 
