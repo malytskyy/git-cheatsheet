@@ -1,4 +1,10 @@
 # Git Cheatsheet
+## Overview
+- [Getting information](#getting-information)
+- [Make changes](#make-changes)
+- [Undo changes](#undo-changes)
+- [Branches](#branches)
+
 ## Getting information
 Show short status  
  ``` 
