@@ -47,7 +47,7 @@
 |```git rebase [branch]```|Integrate branch `[branch]`  into current branch|
 |```git push -u```|Create public remote branch from current. Call this to set default:```$ git config --global push.default current```|
 |```git push origin --delete [branch]```|Delete remote branch `[branch]`|
-
-
+|```git branch -r```|List remote branches|
+|```git remote prune origin```|Clean-up outdated references|
 
 
