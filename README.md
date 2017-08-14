@@ -15,6 +15,7 @@
 |```git branch```|Show all branches|
 |```git diff --name-only --diff-filter=U```|List only conflicted files |
 |```git ls-files --others --exclude-standard```|List all untracked files in text-processing friendly mode|
+|```git push --force-with-lease```|Force push a branch, but with checking if remote branch will be overwritten|
 
 ## Make changes
 |Command|Description|
