@@ -34,7 +34,8 @@
 |```git reset --hard HEAD```|The working tree and staging area are reset to the tip of the current branch or `HEAD`|
 |```git checkout -- [file]```|Undo changes locally to modified unstaged file `[file]`|
 |```git reset --soft HEAD~1```|Undo a commit|
-
+|```git log --diff-filter=D --summary -- [file]```|Find info on deleted files matching path|
+|```git checkout [commitId]^ -- [file]```|To undo deletion of a file by specific commit id|
 
 ## Branches
 |Command|Description|
